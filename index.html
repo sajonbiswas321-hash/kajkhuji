@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102b64">
+<meta name="description" content="KajKhuji — সহজ অনলাইন টুল, শেখা ও কাজের সহায়ক প্ল্যাটফর্ম।">
+<title>KajKhuji — Smart Tools. Simple Solutions.</title>
+<style>
+:root{--navy:#092653;--blue:#1768ff;--purple:#7838e8;--ink:#10234a;--muted:#536584;--paper:#f6f8ff;--line:#e4eaf7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif;color:var(--ink);background:var(--paper)}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}
+.wrap{width:min(1160px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900;font-size:1.45rem}.logo{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#0ba8ff,#6238ee);color:#fff;font-weight:950;font-size:1.5rem}.brand small{display:block;font-size:.68rem;font-weight:500;color:var(--muted)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.92rem}nav a:hover{color:var(--blue)}
+.hero{margin:22px auto 28px;min-height:330px;border-radius:25px;overflow:hidden;color:white;background:radial-gradient(ellipse at 78% 30%,#5d9ed7 0,#274d93 30%,transparent 55%),linear-gradient(120deg,#071c43,#0b3c79 58%,#6a69c8);position:relative;padding:clamp(28px,5vw,58px);display:flex;align-items:center}.hero:after{content:"✦  ·  ✧  ·  ✦";position:absolute;right:6%;bottom:24%;font-size:clamp(24px,4vw,48px);color:#ffffffa8;letter-spacing:12px}.hero-copy{max-width:650px;position:relative;z-index:1}.eyebrow{font-weight:800;letter-spacing:.04em;color:#b9e7ff}.hero h1{font-size:clamp(2.4rem,6vw,4.8rem);line-height:1.02;margin:8px 0}.gradient{background:linear-gradient(90deg,#fff,#a7d9ff,#d9b7ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:590px;line-height:1.8;color:#e3edff}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{padding:12px 19px;border-radius:14px;font-weight:800;display:inline-flex;align-items:center;gap:8px}.primary{background:linear-gradient(100deg,#1768ff,#8539ed);color:white}.secondary{background:#ffffff17;border:1px solid #ffffff80;color:white}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 16px}.section-head h2{margin:0;font-size:clamp(1.4rem,3vw,2rem)}.section-head p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.tool-card{border:1px solid var(--line);border-radius:20px;padding:22px;background:white;box-shadow:0 8px 24px #173a7410}.tool-card:nth-child(1){background:linear-gradient(145deg,#fff0f1,#fff)}.tool-card:nth-child(2){background:linear-gradient(145deg,#e8f8ff,#fff)}.tool-card:nth-child(3){background:linear-gradient(145deg,#e8fff2,#fff)}.ico{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#fff;font-size:1.6rem;box-shadow:0 4px 15px #173a7410}.tool-card h3{margin:14px 0 7px}.tool-card p{color:var(--muted);line-height:1.7;min-height:52px}.card-btn{background:var(--navy);color:#fff;padding:10px 14px;border-radius:11px;font-weight:750}.features{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:22px 0}.feature{background:#fff;border:1px solid var(--line);padding:15px;border-radius:16px}.feature b{display:block;margin:7px 0 3px}.feature span{font-size:.88rem;color:var(--muted)}
+.panel{display:none;background:white;border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,30px);margin:24px 0;box-shadow:0 12px 35px #173a7410}.panel.active{display:block}.panel-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.panel h2{margin:0 0 8px}.close{background:#edf2ff;color:var(--navy);border-radius:10px;padding:8px 12px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px;margin:10px 0}.field label{font-weight:750}.field input,.field textarea,.field select{border:1px solid #d7e0f2;border-radius:12px;padding:12px;background:#fbfcff;color:var(--ink);width:100%}.field textarea{min-height:90px;resize:vertical}.result{background:#f3f6ff;border:1px dashed #a8bce9;border-radius:14px;padding:15px;margin-top:14px;white-space:pre-wrap;line-height:1.7}.rowbtn{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.copy{background:#e9efff;color:#1743a1;padding:10px 14px;border-radius:10px;font-weight:800}.question{border:1px solid var(--line);padding:15px;border-radius:14px;margin:12px 0}.question label{display:block;padding:7px 0}.notice{font-size:.88rem;color:var(--muted)}
+.banner{margin:30px 0;background:linear-gradient(100deg,#092653,#4536bd,#743de0);border-radius:20px;padding:24px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:18px}.banner h2{margin:0 0 5px}.banner p{margin:0;color:#e1e9ff}
+footer{background:#061a3a;color:#e8efff;margin-top:35px;padding:26px 0}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.foot a{color:#e8efff;text-decoration:none;margin-right:12px}.tiny{font-size:.82rem;color:#b8c8e8}
+@media(max-width:850px){nav{gap:10px}nav a{font-size:.82rem}.grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:repeat(3,1fr)}.hero:after{right:3%;opacity:.55}}
+@media(max-width:600px){.nav{align-items:flex-start;flex-direction:column}.nav nav{width:100%;justify-content:space-between}.hero{min-height:300px;padding:25px 20px}.hero:after{font-size:22px;bottom:8%;letter-spacing:3px}.grid,.form-grid{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column}.banner{align-items:flex-start;flex-direction:column}.tool-card p{min-height:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">K</span><span>KajKhuji<small>Smart Tools. Simple Solutions.</small></span></a>
+<nav aria-label="প্রধান মেনু"><a href="#home">⌂ হোম</a><a href="#tools">🔧 টুলস</a><a href="#learn">🎓 শিক্ষা</a><a href="#about">ⓘ সম্পর্কে</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero" id="home"><div class="hero-copy">
+<div class="eyebrow">স্বাগতম — আপনার ডিজিটাল সহায়ক</div>
+<h1><span class="gradient">KajKhuji</span></h1>
+<h2>সহজ অনলাইন টুল, শেখা ও কাজের সহায়ক প্ল্যাটফর্ম</h2>
+<p>ভিডিওর আইডিয়া গুছিয়ে নিন, নতুন ইংরেজি বাক্য শিখুন, আর ছোট কুইজে নিজের জ্ঞান যাচাই করুন—সব এক জায়গায়।</p>
+<div class="actions"><a class="btn primary" href="#tools">🚀 চলুন শুরু করি →</a><a class="btn secondary" href="#learn">📘 শেখা শুরু করুন</a></div>
+</div></section>
+<section id="tools"><div class="section-head"><div><h2>⭐ আমাদের প্রধান টুলস</h2><p>আপনার কাজকে আরও সহজ করতে তৈরি ছোট ছোট টুল।</p></div></div>
+<div class="grid">
+<article class="tool-card"><div class="ico">▶️</div><h3>YouTube টাইটেল সহায়ক</h3><p>ভিডিওর বিষয় লিখুন, তারপর টাইটেল ও ডেসক্রিপশনের খসড়া তৈরি করুন।</p><button class="card-btn" data-open="youtube">টুলটি ব্যবহার করুন →</button></article>
+<article class="tool-card"><div class="ico">🌐</div><h3>বাংলা ↔ ইংরেজি শেখা</h3><p>সহজ ইংরেজি বাক্য, বাংলা অর্থ ও উচ্চারণ দেখে অনুশীলন করুন।</p><button class="card-btn" data-open="language">শিখতে শুরু করুন →</button></article>
+<article class="tool-card"><div class="ico">🎓</div><h3>MCQ কুইজ ও নম্বর</h3><p>কয়েকটি প্রশ্নের উত্তর দিন এবং সঙ্গে সঙ্গে নিজের স্কোর দেখুন।</p><button class="card-btn" data-open="quiz">কুইজ শুরু করুন →</button></article>
+</div></section>
+<section class="panel" id="youtube"><div class="panel-top"><h2>▶️ YouTube টাইটেল সহায়ক</h2><button class="close" data-close>বন্ধ করুন ✕</button></div><p class="notice">এটি আপনার দেওয়া বিষয় থেকে টেমপ্লেট-ভিত্তিক খসড়া তৈরি করে; ফলাফল প্রকাশের আগে নিজে যাচাই করুন।</p>
+<div class="field"><label for="topic">ভিডিওর বিষয়</label><input id="topic" placeholder="যেমন: গ্রামের পুকুরে মাছ ধরা"></div>
+<div class="field"><label for="audience">দর্শক</label><select id="audience"><option>বাংলা দর্শক</option><option>ইংরেজিভাষী দর্শক</option></select></div>
+<button class="card-btn" id="makeTitle">খসড়া তৈরি করুন</button><div class="result" id="titleResult" aria-live="polite">আপনার খসড়া এখানে দেখা যাবে।</div><div class="rowbtn"><button class="copy" data-copy="titleResult">কপি করুন</button></div></section>
+<section class="panel" id="language"><div class="panel-top"><h2>🌐 বাংলা ↔ ইংরেজি শেখা</h2><button class="close" data-close>বন্ধ করুন ✕</button></div><p>একটি বাক্য বেছে নিয়ে ইংরেজি, বাংলা অর্থ ও উচ্চারণ অনুশীলন করুন।</p>
+<div class="field"><label for="phrase">বাক্য বেছে নিন</label><select id="phrase"><option value="0">আমি প্রতিদিন ইংরেজি শিখি।</option><option value="1">আমি আমার পরিবারকে সাহায্য করি।</option><option value="2">আমি নতুন কিছু শিখতে চাই।</option><option value="3">চলো কাজটি শুরু করি।</option><option value="4">আমি আমার লক্ষ্য পূরণ করব।</option></select></div>
+<div class="result" id="phraseResult" aria-live="polite"></div><button class="card-btn" id="showPhrase">বাক্য দেখুন</button></section>
+<section class="panel" id="quiz"><div class="panel-top"><h2>🎓 ছোট MCQ কুইজ</h2><button class="close" data-close>বন্ধ করুন ✕</button></div><p>প্রশ্নগুলোর উত্তর বেছে নিন, তারপর ফলাফল দেখুন।</p>
+<form id="quizForm">
+<div class="question"><b>১. “Mainly” শব্দের বাংলা অর্থ কী?</b><label><input type="radio" name="q1" value="a"> ধীরে ধীরে</label><label><input type="radio" name="q1" value="b"> প্রধানত</label><label><input type="radio" name="q1" value="c"> কখনো না</label></div>
+<div class="question"><b>২. “I am a student.” এর অর্থ কী?</b><label><input type="radio" name="q2" value="a"> আমি একজন শিক্ষক।</label><label><input type="radio" name="q2" value="b"> আমি একজন ছাত্র/ছাত্রী।</label><label><input type="radio" name="q2" value="c"> আমি বাড়িতে আছি।</label></div>
+<div class="question"><b>৩. ৫টির মধ্যে ৪টি সঠিক হলে স্কোর কত শতাংশ?</b><label><input type="radio" name="q3" value="a"> ৪০%</label><label><input type="radio" name="q3" value="b"> ৮০%</label><label><input type="radio" name="q3" value="c"> ৯০%</label></div>
+<button class="card-btn" type="submit">আমার ফলাফল দেখুন</button></form><div class="result" id="quizResult" aria-live="polite">আপনার ফলাফল এখানে দেখানো হবে।</div></section>
+<section id="learn"><div class="section-head"><div><h2>✨ আরও যেসব সুবিধা আসছে</h2><p>ধীরে ধীরে নতুন ফিচার যোগ করা হবে।</p></div></div><div class="features">
+<div class="feature">📚<b>পড়াশোনার গাইড</b><span>নোট ও পড়ার পরিকল্পনা</span></div><div class="feature">🗓️<b>দৈনিক কাজ</b><span>নিজের কাজ গুছিয়ে নিন</span></div><div class="feature">💡<b>দক্ষতা শেখা</b><span>নতুনদের জন্য টিপস</span></div><div class="feature">🎬<b>ভিডিও আইডিয়া</b><span>কনটেন্ট ভাবনা লিখে রাখুন</span></div><div class="feature">👤<b>আমার লক্ষ্য</b><span>নিজের অগ্রগতি পরিকল্পনা</span></div></div></section>
+<section class="banner" id="about"><div><h2>ছোট ছোট পদক্ষেপ, বড় স্বপ্ন 🌱</h2><p>KajKhuji—সহজ টুল ও শেখার মাধ্যমে এগিয়ে চলার একটি উদ্যোগ।</p></div><strong>এই ওয়েবসাইটটি বিনামূল্যে ব্যবহার করুন ✨</strong></section>
+</main>
+<footer><div class="wrap foot"><div><strong>🔷 KajKhuji</strong><div class="tiny">Smart Tools. Simple Solutions.</div></div><div><a href="#home">হোম</a><a href="#tools">টুলস</a><a href="#learn">শিক্ষা</a><a href="#about">সম্পর্কে</a></div><div class="tiny">শিখুন • তৈরি করুন • এগিয়ে যান ❤️</div></div></footer>
+<script>
+const panels=[...document.querySelectorAll('.panel')];
+function openPanel(id){panels.forEach(p=>p.classList.toggle('active',p.id===id));document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openPanel(b.dataset.open)));
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('.panel').classList.remove('active')));
+document.getElementById('makeTitle').addEventListener('click',()=>{
+ const topic=document.getElementById('topic').value.trim(), audience=document.getElementById('audience').value, out=document.getElementById('titleResult');
+ if(!topic){out.textContent='আগে ভিডিওর বিষয় লিখুন।';return}
+ if(audience==='ইংরেজিভাষী দর্শক'){
+ out.textContent=`TITLE IDEAS\n1. A Day Exploring ${topic}\n2. You Won't Believe This ${topic} Experience!\n3. My Experience: ${topic}\n\nDESCRIPTION DRAFT\nJoin me as I share ${topic}. Watch till the end and tell me what you think in the comments.\n\nHASHTAGS\n#Vlog #Explore #DailyLife`;
+ }else{
+ out.textContent=`টাইটেলের ধারণা\n১. ${topic} — আজকের অভিজ্ঞতা!\n২. এমন ${topic} আগে দেখেছেন?\n৩. ${topic} নিয়ে একটি সুন্দর দিন\n\nডেসক্রিপশন খসড়া\nআজকের ভিডিওতে ${topic} নিয়ে আমার অভিজ্ঞতা শেয়ার করেছি। ভিডিওটি ভালো লাগলে মতামত কমেন্টে জানাবেন।\n\nহ্যাশট্যাগ\n#বাংলাVlog #DailyLife #বাংলা`;
+ }
+});
+const phrases=[
+['I learn English every day.','আমি প্রতিদিন ইংরেজি শিখি।','আই লার্ন ইংলিশ এভরি ডে'],
+['I help my family.','আমি আমার পরিবারকে সাহায্য করি।','আই হেল্প মাই ফ্যামিলি'],
+['I want to learn something new.','আমি নতুন কিছু শিখতে চাই।','আই ওয়ান্ট টু লার্ন সামথিং নিউ'],
+['Let’s start the task.','চলো কাজটি শুরু করি।','লেটস স্টার্ট দ্য টাস্ক'],
+['I will achieve my goal.','আমি আমার লক্ষ্য পূরণ করব।','আই উইল অ্যাচিভ মাই গোল']];
+function showPhrase(){const p=phrases[+document.getElementById('phrase').value];document.getElementById('phraseResult').textContent=`English: ${p[0]}\nবাংলা অর্থ: ${p[1]}\nবাংলা উচ্চারণ: ${p[2]}`;}
+document.getElementById('showPhrase').addEventListener('click',showPhrase);document.getElementById('phrase').addEventListener('change',showPhrase);showPhrase();
+document.getElementById('quizForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);let score=0;const answers={q1:'b',q2:'b',q3:'b'};for(const k in answers)if(f.get(k)===answers[k])score++;document.getElementById('quizResult').textContent=`আপনার স্কোর: ${score}/3 (${Math.round(score/3*100)}%)\n${score===3?'দারুণ! সব উত্তর সঠিক।':score===2?'ভালো করেছেন! ভুল উত্তরগুলো আবার দেখুন।':'চেষ্টা চালিয়ে যান—আবার কুইজ দিন।'}\nসঠিক উত্তর: ১. প্রধানত, ২. আমি একজন ছাত্র/ছাত্রী, ৩. ৮০%`});
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const text=document.getElementById(b.dataset.copy).textContent;try{await navigator.clipboard.writeText(text);b.textContent='কপি হয়েছে ✓';setTimeout(()=>b.textContent='কপি করুন',1400)}catch(e){alert('কপি করা যায়নি। লেখাটি চেপে ধরে কপি করুন।')}}));
+</script>
+</body></html>
